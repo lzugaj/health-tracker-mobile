@@ -1,12 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Button } from "@rneui/themed";
+import { Icon } from "@rneui/base";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+    <SafeAreaProvider style={styles.container}>
+      <Button type="solid">
+        Icon
+        <Icon name="home" color="white" />
+      </Button>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaProvider>
   );
 }
 
